@@ -30,9 +30,18 @@ STATUS        : Development
 #include <qdict.h>
 #include <locale.h>
 #include <libintl.h>
+
 #include <unistd.h>
+extern "C" {
+#include <GL/glx.h>
+}
 
 #include "common.h"
+
+//====================================
+// Prototypes ...
+//------------------------------------
+bool hasDirectRendering (int);
 
 //====================================
 // Just do the job :-) ...
@@ -40,7 +49,6 @@ STATUS        : Development
 int main (int argc,char* argv[],char* envp[]) {
 	int fd = 0;
 	QString device ("/dev/dsp");
-	QString test3D ("/usr/X11R6/bin/glXIsDirect");
 	QString program;
 	QDict<char> mText;
 
@@ -151,34 +159,19 @@ int main (int argc,char* argv[],char* envp[]) {
 	}
 
 	// ...
-	// next check for 3D using the magic test3D script
-	// which checks if the given command is linked
-	// against the libGL and if the openGL system is
-	// ready
+	// next check for 3D using the GLX extension
+	// to ensure direct rendering is supported
 	// ---
 	if (check3D) {
-		QString command;
-		needWarning = false;
-		int code = system (test3D.ascii());
-		switch ( WEXITSTATUS (code) ) {
-		case 1:
-			needWarning = true;
-		break;
-		case 0:
-			needWarning = false;
-		break;
-		case -1:
-			fprintf (stderr,"system() failed: %s\n",
-				strerror(errno)
-			);
-		break;
-		}
-		if (needWarning) {
+	if (! hasDirectRendering(0)) {
+		needWarning = true;
 		baseCheck = setWarning ( "3DText",mText );
 		if (! baseCheck) {
 			exit (1);
 		}
-		}
+	} else {
+		needWarning = false;
+	}
 	}
 
 	// ...
@@ -206,3 +199,32 @@ int main (int argc,char* argv[],char* envp[]) {
 	);
 	exit (1);
 }
+
+//=====================================
+// check for render extension
+//-------------------------------------
+bool hasDirectRendering (int screen) {
+	Display *dpy = QApplication::desktop()->x11Display();
+	int attribSingle[] = {
+		GLX_RGBA,
+		GLX_RED_SIZE,   1,
+		GLX_GREEN_SIZE, 1,
+		GLX_BLUE_SIZE,  1,
+		None
+	};
+	XVisualInfo* visinfo = glXChooseVisual (
+		dpy, screen, attribSingle
+	);
+	if (visinfo) {
+		GLXContext ctx = glXCreateContext ( dpy, visinfo, NULL, True );
+		if (glXIsDirect(dpy, ctx)) {
+			glXDestroyContext (dpy,ctx);
+			return true;
+		}
+		glXDestroyContext (dpy,ctx);
+		return false;
+	} else {
+		return false;
+	}
+}
+
