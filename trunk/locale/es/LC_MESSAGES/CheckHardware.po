@@ -1,22 +1,22 @@
-# domain "CheckHardware.mo"
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# translation of checkhardware.po to 
+# Copyright (C) 2003 Free Software Foundation, Inc.
 #
 # fuzzy
+# SOME DESCRIPTIVE TITLE. Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2003
 #: SOME DESCRIPTIVE TITLE. Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 #: This FIRST AUTHOR <EMAIL@ADDRESS> fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: checkhardware\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-09-24 15:06+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2003-09-24 11:21+0200\n"
+"Last-Translator: \n"
+"Language-Team:  <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
 
 # internal key used: SoundText
 #: internal key
@@ -25,32 +25,32 @@ msgid ""
 "available or sound support not configured yet. However application uses "
 "respectively requires sound support."
 msgstr ""
-"<b>Direkter Zugriff auf Soundkarte nicht möglich</b><br><hr><br>Keine "
-"Soundkarte verfügbar oder Sound Unterstützung noch nicht konfiguriert. "
-"Applikation verwendet bzw. benötigt jedoch Sound Unterstützung."
+"<b>No es posible acceder directamente al dispositivo de sonido</"
+"b><br><hr><br>No hay ningunatarjeta de sonido disponible o el soporte de "
+"sonido no ha sido configurado aún. No obstante, la aplicación utiliza o "
+"requiere soporte de sonido."
 
 # internal key used: Cancel
 #: internal key
 msgid "Abort"
-msgstr "Abbrechen"
+msgstr "Cancelar"
 
 # internal key used: Ok
 #: internal key
 msgid "Continue"
-msgstr "Weiter"
+msgstr "Continuar"
 
-# internal key used: 3DText
 #: internal key used:3 DText
 msgid ""
 "<b>3D hardware support not available</b><br><hr><br>No 3D graphics card "
 "available or 3D support not configured yet. However application uses "
 "respectively requires 3D hardware support."
 msgstr ""
-"<b>3D Hardware Unterstützung nicht verfügbar</b><br><hr><br>Keine 3D-"
-"Grafikkarte verfügbar oder 3D Unterstützung noch nicht konfiguriert. "
-"Applikation verwendet bzw. benötigt jedoch 3D Hardware Unterstützung."
+"<b>Soporte de hardware 3D no disponible</b><br><hr><br>No hay ninguna "
+"tarjeta gráfica 3D disponible o el soporte 3D no ha sido configurado aún. No "
+"obstante, la aplicación utiliza o requiere soporte de hardware 3D."
 
 # internal key used: Warning
 #: internal key
 msgid "Warning..."
-msgstr "Warnung..."
+msgstr "Advertencia..."

@@ -1,19 +1,17 @@
-# domain "CheckHardware.mo"
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Japanese translations for CheckHardware
+# Copyright (C) 2003 SuSE Linux AG
+# Mike FABIAN <mfabian@suse.de>, 2003
 #
-# fuzzy
 #: SOME DESCRIPTIVE TITLE. Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 #: This FIRST AUTHOR <EMAIL@ADDRESS> fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: CheckHardware\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-09-24 15:06+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2003-09-24 11:15+0200\n"
+"Last-Translator: Mike FABIAN <mfabian@suse.de>\n"
+"Language-Team: Japanese <suse-linux-ja@suse.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
@@ -25,32 +23,36 @@ msgid ""
 "available or sound support not configured yet. However application uses "
 "respectively requires sound support."
 msgstr ""
-"<b>Direkter Zugriff auf Soundkarte nicht möglich</b><br><hr><br>Keine "
-"Soundkarte verfügbar oder Sound Unterstützung noch nicht konfiguriert. "
-"Applikation verwendet bzw. benötigt jedoch Sound Unterstützung."
+"<b>サウンド・デバイスを直接アクセスできません。</b><br>\n"
+"<hr>\n"
+"<br>\n"
+"サウンド・カートがありますん。或はサウンド・サポートはまだ設定されていませ"
+"ん。\n"
+"しかし、サウンド・サポートはプログラムに使用されています。"
 
 # internal key used: Cancel
 #: internal key
 msgid "Abort"
-msgstr "Abbrechen"
+msgstr "中止"
 
 # internal key used: Ok
 #: internal key
 msgid "Continue"
-msgstr "Weiter"
+msgstr "続ける"
 
-# internal key used: 3DText
 #: internal key used:3 DText
 msgid ""
 "<b>3D hardware support not available</b><br><hr><br>No 3D graphics card "
 "available or 3D support not configured yet. However application uses "
 "respectively requires 3D hardware support."
 msgstr ""
-"<b>3D Hardware Unterstützung nicht verfügbar</b><br><hr><br>Keine 3D-"
-"Grafikkarte verfügbar oder 3D Unterstützung noch nicht konfiguriert. "
-"Applikation verwendet bzw. benötigt jedoch 3D Hardware Unterstützung."
+"<b>3D ハードウェア・サポートがありません。</b><br>\n"
+"<hr>\n"
+"<br>3D グラフィクス・カードがありません。\n"
+"或は、3D サポートは設定されていません。\n"
+"しかし、3D ハードウェア・サポートはプログラムに使用されています。"
 
 # internal key used: Warning
 #: internal key
 msgid "Warning..."
-msgstr "Warnung..."
+msgstr "警告 ..."

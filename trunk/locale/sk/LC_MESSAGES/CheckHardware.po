@@ -1,22 +1,21 @@
-# domain "CheckHardware.mo"
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# translation of CheckHardware.po to Slovak
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2003.
 #
-# fuzzy
 #: SOME DESCRIPTIVE TITLE. Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 #: This FIRST AUTHOR <EMAIL@ADDRESS> fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: CheckHardware\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-09-24 15:06+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2003-09-24 10:40+0200\n"
+"Last-Translator: Stanislav Visnovsky <visnovsky@kde.org>\n"
+"Language-Team: Slovak <sk-i18n@linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.2\n"
 
 # internal key used: SoundText
 #: internal key
@@ -25,32 +24,31 @@ msgid ""
 "available or sound support not configured yet. However application uses "
 "respectively requires sound support."
 msgstr ""
-"<b>Direkter Zugriff auf Soundkarte nicht möglich</b><br><hr><br>Keine "
-"Soundkarte verfügbar oder Sound Unterstützung noch nicht konfiguriert. "
-"Applikation verwendet bzw. benötigt jedoch Sound Unterstützung."
+"<b>Nie je možný priamy prístup k zvukovému zariadeniu</b><br><hr><br>Nie je "
+"k dispozícii žiadna zvuková karta alebo ešte nemáte nakonfigurovanú podporu "
+"zvuku. Niektoré aplikácie ju ale vyžadujú."
 
 # internal key used: Cancel
 #: internal key
 msgid "Abort"
-msgstr "Abbrechen"
+msgstr "Prerušiť"
 
 # internal key used: Ok
 #: internal key
 msgid "Continue"
-msgstr "Weiter"
+msgstr "Pokračovať"
 
-# internal key used: 3DText
 #: internal key used:3 DText
 msgid ""
 "<b>3D hardware support not available</b><br><hr><br>No 3D graphics card "
 "available or 3D support not configured yet. However application uses "
 "respectively requires 3D hardware support."
 msgstr ""
-"<b>3D Hardware Unterstützung nicht verfügbar</b><br><hr><br>Keine 3D-"
-"Grafikkarte verfügbar oder 3D Unterstützung noch nicht konfiguriert. "
-"Applikation verwendet bzw. benötigt jedoch 3D Hardware Unterstützung."
+"<b>Nie je k dispozícii hardwarová podpora 3D</b><br><hr><br>Nie je k "
+"dispozícii žiadna grafická karta alebo ešte nemáte nakonfigurovanú podporu "
+"3D. Niektoré aplikácie ju ale vyžadujú."
 
 # internal key used: Warning
 #: internal key
 msgid "Warning..."
-msgstr "Warnung..."
+msgstr "Varovanie..."
