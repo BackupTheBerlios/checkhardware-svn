@@ -141,7 +141,7 @@ int main (int argc,char* argv[],char* envp[]) {
 		QString convert = QString::fromLocal8Bit(mText["SoundText"]);
 		QString message;
 		QTextOStream (&message) 
-			<< convert << "<nobr>" << strerror(errno) << " /dev/dsp</nobr>";
+			<< convert;
 		baseCheck = setWarning ( message,mText );
 		if (! baseCheck) {
 			exit (1);

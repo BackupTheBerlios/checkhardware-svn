@@ -81,10 +81,10 @@ QDict<char> loadText ( bool translate ) {
 		"Cancel"
 	);
 	keyList.insert ("SoundText",
-		"<b>Failed to init sound device:</b><br><hr><br>"
+		"<b>Direct access to sound device not possible</b><br><hr><br>"
 	);
 	keyList.insert ("3DText",
-		"<b>Missing Requirements:</b><br><hr><br><nobr>3D hardware acceleration not available</nobr>"
+		"<b>3D hardware support not available</b><br><hr><br>"
 	);
 
 	QDictIterator<char> it (keyList);

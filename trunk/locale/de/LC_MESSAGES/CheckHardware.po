@@ -16,14 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 # internal key used: SoundText
-msgid "<b>Failed to init sound device:</b><br><hr><br>"
+msgid "<b>Direct access to sound device not possible</b><br><hr><br>"
 msgstr ""
-"<b>Zugriff auf Soundkarte verweigert:</b><br><hr><br>Sound Unterstützung "
-"nicht verfügbar oder nicht korrekt konfiguriert. Dies führt zu nicht "
-"vorhandener Sound Unterstützung für die Applikation oder sogar dazu, dass "
-"das Spiel wegen nicht vorhanderen Sound UnterstA¼tzung gar nicht starten "
-"kann. Details zur Konfiguration von Sound finden Sie auch im Handbuch "
-"\"Konfiguration\", Kapitel \"Sound Konfiguration\"."
+"<b>Direkter Zugriff auf Soundkarte nicht möglich</b><br><hr><br>"
+"Keine Soundkarte verfügbar oder Sound Unterstützung noch nicht "
+"konfiguriert. Applikation verwendet bzw. benötigt jedoch Sound "
+"Unterstützung."
 
 # internal key used: Cancel
 msgid "Cancel"
@@ -35,15 +33,14 @@ msgstr "Weiter"
 
 # internal key used: 3DText
 msgid ""
-"<b>Missing Requirements:</b><br><hr><br><nobr>3D hardware acceleration not "
-"available</nobr>"
+"<b>3D hardware support not available</b><br><hr><br>"
 msgstr ""
-"<b>Fehlende Hardwareanforderung:</b><br><hr><br>3D Hardware Beschleunigung "
-"nicht verfügbar oder nicht korrekt konfiguriert. Dies verschlechtert die 3D "
-"Performance erheblich und kann 3D Spiele unspielbar machen. Details finden "
-"Sie auch im Handbuch \"Referenz\", Kapitel \"OpenGL/3D Konfiguration\" zur "
-"unterstützten 3D Hardware und deren Konfiguration."
+"<b>3D Hardware Unterstützung nicht verfügbar</b><br><hr><br>"
+"Keine 3D-Grafikkarte verfügbar oder 3D Unterstützung noch nicht "
+"konfiguriert. Applikation verwendet bzw. benötigt jedoch 3D Hardware "
+"Unterstützung."
 
 # internal key used: Warning
 msgid "Warning..."
 msgstr "Warnung..."
+

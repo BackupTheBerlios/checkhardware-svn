@@ -15,13 +15,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 # internal key used: SoundText
-msgid "<b>Failed to init sound device:</b><br><hr><br>"
+msgid "<b>Direct access to sound device not possible</b><br><hr><br>"
 msgstr ""
-"<b>Failed to init sound device:</b><br><hr><br>Sound supportnot available or "
-"not configured correctly. This willresult in a not working sound support for "
-"the application or even in anot starting application because of lacking "
-"sound support. See also\"Configuration\" manual, chapter \"Sound "
-"configuration\" for soundconfiguration details."
+"<b>Direct access to sound device not possible</b><br><hr><br>" 
+"No soundcard available or sound support not configured yet. However "
+"application uses respectively requires sound support."
 
 # internal key used: Cancel
 msgid "Cancel"
@@ -33,15 +31,14 @@ msgstr "Continue"
 
 # internal key used: 3DText
 msgid ""
-"<b>Missing Requirements:</b><br><hr><br><nobr>3D hardware acceleration not "
-"available</nobr>"
+"<b>3D hardware support not available</b><br><hr><br>"
 msgstr ""
-"<b>Missing 3D Requirements:</b><br><hr><br>:3D hardware acceleration not "
-"available or not configuredcorrectly. This slows down 3D performance "
-"drastically and can make 3Dgames unplayable. See also \"Reference\" manual, "
-"chapter \"OpenGL/3D\"\"configuration\" for details about supported 3D "
-"Hardware andconfiguration issues."
+"<b>3D hardware support not available</b><br><hr><br>"
+"No 3D graphics card available or 3D support not configured "
+"yet. However application uses respectively requires 3D hardware "
+"support."
 
 # internal key used: Warning
 msgid "Warning..."
 msgstr ""
+
