@@ -89,12 +89,11 @@ int main (int argc,char* argv[],char* envp[]) {
 	char* baseName = NULL;
 	QRegExp option ("^-");
 	for ( int i=1; i<qApp->argc(); i++ ) {
-	int position = option.search (qApp->argv()[i],0);
+	QString opt (qApp->argv()[i]);
+	int position = option.search (opt,0);
 	if (position < 0) { 
 		if (program.isNull()) {
 		program.sprintf("%s",qApp->argv()[i]);
-		baseName = (char*) malloc (sizeof(char) * program.length());
-		sprintf(baseName,"%s",program.ascii());
 		continue;
 		} 
 	}
@@ -112,7 +111,7 @@ int main (int argc,char* argv[],char* envp[]) {
 	// CheckHardware --sound /bin/ls -l                     --> ok
 	// CheckHardware --sound -l /bin/ls                     --> invalid
 	// ---
-	if (baseName) {
+	if (! program.isNull()) {
 		pArgv[count] = qApp->argv()[i];
 		count++;
 	} else {
@@ -123,9 +122,11 @@ int main (int argc,char* argv[],char* envp[]) {
 	// ...
 	// Only try to fork command if command is set
 	// ---
-	if (!baseName) {
+	if (program.isNull()) {
 		usage();
 	}
+	baseName = (char*) malloc (sizeof(char) * program.length() + 1);
+	sprintf(baseName,"%s",program.latin1());
 	pArgv[0] = baseName;
 	pArgv[count] = NULL;
 
