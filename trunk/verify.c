@@ -189,6 +189,7 @@ int main (int argc,char* argv[],char* envp[]) {
 	if (! baseCheck) {
 		exit (1);
 	}
+	app.exit();
 
 	// ...
 	// ok the checks were successfull and we can
@@ -198,7 +199,7 @@ int main (int argc,char* argv[],char* envp[]) {
 	// ---
 	// Just enable the behaviour you want to use
 	// ---
-	#if 0
+	#if 1
 	signal ( SIGCHLD,child );
 	switch (fork()) {
 	case -1:
@@ -215,7 +216,7 @@ int main (int argc,char* argv[],char* envp[]) {
 	}
 	#endif
 
-	#if 1
+	#if 0
 	execvp(pArgv[0],pArgv);
 	fprintf(stderr,"execvp() failed: %s\n",
 		strerror(errno)
