@@ -1,6 +1,6 @@
 LOCALEVZ   = $(DESTDIR)/usr/share/locale
 LC         = LC_MESSAGES
-LD_FLAGS   = -L/usr/lib/qt3/lib
+LD_FLAGS   = -L/usr/lib/qt3/lib -lGL
 
 
 all: CheckHardware Translate
