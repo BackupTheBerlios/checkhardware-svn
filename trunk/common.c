@@ -36,8 +36,8 @@ STATUS        : Development
 bool setWarning ( const QString & text, const QDict<char> & mText ) {
 	QMessageBox mb (
 		mText["Warning"],text,QMessageBox::Warning,
-		QMessageBox::Ok | QMessageBox::Default,
-		QMessageBox::Cancel,
+		QMessageBox::Ok,
+		QMessageBox::Cancel | QMessageBox::Default,
 		0,0
 	);
 	mb.setButtonText (
