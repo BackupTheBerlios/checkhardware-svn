@@ -21,7 +21,7 @@
 # otherwise an error is returned
 
 if [ $# -ne 1 ]; then
-  echo "Usage: test3D <command>"
+  echo "Usage: `basename $0` <command>"
   exit 1
 fi
 
