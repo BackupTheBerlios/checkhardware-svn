@@ -140,7 +140,7 @@ int main (int argc,char* argv[],char* envp[]) {
 	if (checkSound) {
 	if ((fd=open (device.ascii(),O_RDONLY | O_NONBLOCK)) < 0) {
 		needWarning = true;
-		baseCheck = setWarning ( mText["SoundText"],mText );
+		baseCheck = setWarning ( "SoundText",mText );
 		if (! baseCheck) {
 			exit (1);
 		}
@@ -174,7 +174,7 @@ int main (int argc,char* argv[],char* envp[]) {
 		break;
 		}
 		if (needWarning) {
-		baseCheck = setWarning ( mText["3DText"],mText );
+		baseCheck = setWarning ( "3DText",mText );
 		if (! baseCheck) {
 			exit (1);
 		}

@@ -44,7 +44,7 @@ void setIntro ( const QDict<char> & mText ) {
 bool setWarning ( const QString & text, QDict<char> & mTextPtr ) {
 	XWrapPointer< QDict<char> > mText (&mTextPtr);
 	QMessageBox mb (
-		mText["Warning"],text,QMessageBox::Warning,
+		mText["Warning"],mText[text],QMessageBox::Warning,
 		QMessageBox::Ok,
 		QMessageBox::Cancel | QMessageBox::Default,
 		0,0
@@ -74,8 +74,7 @@ bool setWarning ( const QString & text, QDict<char> & mTextPtr ) {
 // text loader...
 //-------------------------------------
 QDict<char> loadText ( bool translate ) {
-	setlocale (LC_MESSAGES, "");
-	setlocale (LC_CTYPE,"");
+	setlocale (LC_ALL,"");
 	bindtextdomain ("CheckHardware", TDOMAIN);
 	textdomain ("CheckHardware");
 	QDict<char> mText;
