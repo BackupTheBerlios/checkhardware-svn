@@ -1,0 +1,49 @@
+3D:
+---
+Warning:
+
+3D hardware acceleration not available or not configured
+correctly. This slows down 3D performance drastically and can make 3D
+games unplayable. See also "Reference" manual, chapter "OpenGL/3D
+configuration" for details about supported 3D Hardware and
+configuration issues.
+
+--> "Abort" <--	      "Continue"
+
+
+Warnung:
+
+3D Hardware Beschleunigung nicht verfügbar oder nicht korrekt
+konfiguriert. Dies verschlechtert die 3D Performance erheblich und
+kann 3D Spiele unspielbar machen. Details finden Sie auch im Handbuch
+"Referenz", Kapitel "OpenGL/3D Konfiguration" zur unterstützten 3D
+Hardware und deren Konfiguration.
+
+--> "Abbrechen" <--	      "Weiter"
+
+
+Sound:
+------
+
+Warning:
+
+Sound support not available or not configured correctly. This will
+result in a not working sound support for the application or even in a
+not starting application because of lacking sound support. See also
+"Configuration" manual, chapter "Sound configuration" for sound
+configuration details.
+
+--> "Abort" <--	      "Continue"
+
+
+Warnung:
+
+Sound Unterstützung nicht verfügbar oder nicht korrekt
+konfiguriert. Dies führt zu nicht vorhandener Sound Unterstützung für
+die Applikation oder sogar dazu, dass das Spiel wegen nicht
+vorhanderen Sound Unterstützung gar nicht starten kann. Details zur
+Konfiguration von Sound finden Sie auch im Handbuch "Konfiguration,
+Kapitel "Sound Konfiguration".
+
+--> "Abbrechen" <--	      "Weiter"
+
