@@ -1,11 +1,13 @@
 LOCALEVZ   = $(DESTDIR)/usr/share/locale
 LC         = LC_MESSAGES
+LD_FLAGS   = -L/usr/lib/qt3/lib
+
 
 all: CheckHardware Translate
 
 CheckHardware: verify.o common.o
 	g++ -Wall -O2 -o CheckHardware verify.o common.o \
-		 -lqt-mt -L/usr/lib/qt3/lib
+		 -lqt-mt $(LD_FLAGS)
 
 common.o: common.c common.h
 	g++ -Wall -O2 -c common.c -I/usr/lib/qt3/include
