@@ -103,8 +103,25 @@ int main (int argc,char* argv[],char* envp[]) {
 		check3D = true;
 		continue;
 	}
-	pArgv[count] = qApp->argv()[i];
-	count++;
+	// ...
+	// only take other options than "--sound" and "--3D" as command
+	// option if it follows the command
+	// CheckHardware --sound /bin/ls -l                     --> ok
+	// CheckHardware --sound -l /bin/ls                     --> invalid
+	// ---
+	if (baseName) {
+		pArgv[count] = qApp->argv()[i];
+		count++;
+	} else {
+		usage();
+	}
+	}
+
+	// ...
+	// Only try to fork command if command is set
+	// ---
+	if (!baseName) {
+		usage();
 	}
 	pArgv[0] = baseName;
 	pArgv[count] = NULL;
