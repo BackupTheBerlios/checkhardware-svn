@@ -15,6 +15,7 @@ DESCRIPTION   : Check if the sound device /dev/dsp
 STATUS        : Development
 **************/
 #include <qapplication.h>
+#include <qregexp.h>
 #include <qmessagebox.h>
 #include <qtextstream.h>
 #include <qfile.h>
@@ -86,8 +87,11 @@ int main (int argc,char* argv[],char* envp[]) {
 	int count = 1;
 	char* pArgv [qApp->argc()];
 	char* baseName = NULL;
+	QRegExp option ("^-");
 	for ( int i=1; i<qApp->argc(); i++ ) {
-	if (! QString(qApp->argv()[i]).contains ("-")) {
+	//if (! QString(qApp->argv()[i]).contains ("-")) {
+	int position = option.search (qApp->argv()[i],0);
+	if (position < 0) { 
 		if (program.isNull()) {
 		program.sprintf("%s",qApp->argv()[i]);
 		baseName = (char*) malloc (sizeof(char) * program.length());
@@ -138,11 +142,7 @@ int main (int argc,char* argv[],char* envp[]) {
 	// ---
 	if (checkSound) {
 	if ((fd=open (device.ascii(),O_RDONLY | O_NONBLOCK)) < 0) {
-		QString convert = QString::fromLocal8Bit(mText["SoundText"]);
-		QString message;
-		QTextOStream (&message) 
-			<< convert;
-		baseCheck = setWarning ( message,mText );
+		baseCheck = setWarning ( mText["SoundText"],mText );
 		if (! baseCheck) {
 			exit (1);
 		}
@@ -176,7 +176,6 @@ int main (int argc,char* argv[],char* envp[]) {
 		break;
 		}
 		if (needWarning) {
-		QString message;
 		baseCheck = setWarning ( mText["3DText"],mText );
 		if (! baseCheck) {
 			exit (1);
@@ -194,7 +193,11 @@ int main (int argc,char* argv[],char* envp[]) {
 
 	// ...
 	// ok the checks were successfull and we can
-	// call the program now
+	// call the program now. At the time we will
+	// replace the current process with the new
+	// one without preforking the current process
+	// ---
+	// Just enable the behaviour you want to use
 	// ---
 	#if 0
 	signal ( SIGCHLD,child );
@@ -205,18 +208,20 @@ int main (int argc,char* argv[],char* envp[]) {
 		);
 	break;
 	case 0:
-		printf("%s %s\n",pArgv[0],pArgv[1]);
-		execve(pArgv[0],pArgv,envp);
-		fprintf(stderr,"execve() failed: %s\n",
+		execvp(pArgv[0],pArgv);
+		fprintf(stderr,"execvp() failed: %s\n",
 			strerror(errno)
 		);
 		exit (1);
 	}
-	exit(0);
 	#endif
+
+	#if 1
 	execvp(pArgv[0],pArgv);
 	fprintf(stderr,"execvp() failed: %s\n",
 		strerror(errno)
 	);
+	#endif
+
 	exit (1);
 }

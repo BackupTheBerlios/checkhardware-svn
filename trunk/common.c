@@ -40,11 +40,14 @@ bool setWarning ( const QString & text, const QDict<char> & mText ) {
 		QMessageBox::Cancel | QMessageBox::Default,
 		0,0
 	);
+	QString button;
+	QTextOStream(&button) << "  " << mText["Ok"] << " ";
 	mb.setButtonText (
-		QMessageBox::Ok, mText["Ok"]
+		QMessageBox::Ok, button
 	);
+	QTextOStream(&button) << "  " << mText["Cancel"] << " ";
 	mb.setButtonText (
-		QMessageBox::Cancel,mText["Cancel"]
+		QMessageBox::Cancel, button
 	);
 	switch (mb.exec()) {
 	case QMessageBox::Ok:
