@@ -1,0 +1,56 @@
+# translation of checkhardware.po to German
+# Copyright (C) 2003 Free Software Foundation, Inc.
+#
+# fuzzy
+#: SOME DESCRIPTIVE TITLE. Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Antje Faber <afaber@suse.de>, 2003
+#: This FIRST AUTHOR <EMAIL@ADDRESS> fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: checkhardware\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-09-08 16:07+0200\n"
+"PO-Revision-Date: 2003-09-30 10:57GMT\n"
+"Last-Translator: Antje Faber <afaber@suse.de>\n"
+"Language-Team: German <i18n@suse.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
+
+# internal key used: SoundText
+#: internal key
+msgid ""
+"<b>Direct access to sound device not possible</b><br><hr><br>No soundcard "
+"available or sound support not configured yet. However application uses "
+"respectively requires sound support."
+msgstr ""
+"<b>Impossibile accedere direttamente al dispositivo audio</b><br><hr><br>Nessuna "
+"scheda audio disponibile o supporto audio ancora non configurato. Comunque le "
+"applicazioni richiedono il supporto audio."
+
+# internal key used: Cancel
+#: internal key
+msgid "Abort"
+msgstr "Interrompi"
+
+# internal key used: Ok
+#: internal key
+msgid "Continue"
+msgstr "Continua"
+
+#: internal key used:3 DText
+msgid ""
+"<b>3D hardware support not available</b><br><hr><br>No 3D graphics card "
+"available or 3D support not configured yet. However application uses "
+"respectively requires 3D hardware support."
+msgstr ""
+"<b>Supporto 3D hardware non disponibile </b><br><hr><br>Nessuna scheda 3D grafica "
+"disponibile o supporto 3D ancora non configurato. Comunque le applicazioni richiedono "
+"il supporto 3D hardware."
+
+# internal key used: Warning
+#: internal key
+msgid "Warning..."
+msgstr "Attenzione..."
+
