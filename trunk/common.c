@@ -41,7 +41,8 @@ void setIntro ( const QDict<char> & mText ) {
 //====================================
 // setWarning [ QT message box ]
 //------------------------------------
-bool setWarning ( const QString & text, const QDict<char> & mText ) {
+bool setWarning ( const QString & text, QDict<char> & mTextPtr ) {
+	XWrapPointer< QDict<char> > mText (&mTextPtr);
 	QMessageBox mb (
 		mText["Warning"],text,QMessageBox::Warning,
 		QMessageBox::Ok,

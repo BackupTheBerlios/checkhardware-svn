@@ -23,10 +23,27 @@ STATUS        : Development
 //------------------------------------
 #define TDOMAIN  "/usr/share/locale"
 
+//===================================
+// Templates...
+//-----------------------------------
+template <class T>
+class XWrapPointer {
+    private:
+    T* pM;
+
+    public:
+    XWrapPointer (T* typ) {
+        pM = typ;
+    }
+    QString operator[] (const char* key) {
+        return(QString::fromLocal8Bit(pM->operator[](key)));
+    }
+};
+
 //====================================
 // Prototypes...
 //------------------------------------
-bool setWarning ( const QString & text, const QDict<char> & mText );
+bool setWarning ( const QString & text, QDict<char> & mText );
 void setIntro ( const QDict<char> & mText );
 QDict<char> loadText ( bool = false );
 void child ( int  );
