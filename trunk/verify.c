@@ -67,9 +67,6 @@ int main (int argc,char* argv[],char* envp[]) {
 	if (QString(argv[i]) == "--makePot") {
 		loadText (true);
 	}
-	if (QString(argv[i]) == "--help") {
-		usage();
-	}
 	}
 
 	// ...
