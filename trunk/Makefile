@@ -7,7 +7,7 @@ all: CheckHardware Translate
 
 CheckHardware: verify.o common.o
 	g++ -Wall -O2 -o CheckHardware verify.o common.o \
-		 -lqt-mt $(LD_FLAGS)
+		 -lqt-mt -lutil $(LD_FLAGS)
 
 common.o: common.c common.h
 	g++ -Wall -O2 -c common.c -I/usr/lib/qt3/include

@@ -196,7 +196,7 @@ int main (int argc,char* argv[],char* envp[]) {
 	// ---
 	// Just enable the behaviour you want to use
 	// ---
-	#if 1
+	#if 0
 	signal ( SIGCHLD,child );
 	switch (fork()) {
 	case -1:
@@ -213,7 +213,8 @@ int main (int argc,char* argv[],char* envp[]) {
 	}
 	#endif
 
-	#if 0
+	#if 1
+	setsid();
 	execvp(pArgv[0],pArgv);
 	fprintf(stderr,"execvp() failed: %s\n",
 		strerror(errno)
