@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+# Copyright (c) 2000 SuSE GmbH Nuernberg, Germany.  All rights reserved.
+#
+# Author: Marcus Schaefer <sax@suse.de>, 2000
+# Script for creating .po translation files 
+# 
+# Status : development
+#
+use strict;
+use Env;
+
+#----[ main ]---------#
+sub main {
+#-------------------------------------
+# main function, lets do all those 
+# ugly things :-)
+#
+	my $pot   = "CheckHardware.pot";
+	my $check = "../CheckHardware --makePot | xgettext -L C - -c -o -";
+	my $LC    = "LC_MESSAGES";
+	my $CVS   = "CVS";
+
+	# /.../
+	# call xgettext to create a po template file
+	# ---
+	qx($check | grep -v "^#:" | sed -e s"@^#.@#:@" | sed -e s"@"CHARSET"@"iso-8859-15"@" > $pot);
+
+	# /.../
+	# merge old translations with new template file...
+	# ---
+	opendir (FD,".");
+	my @files = readdir(FD);
+	closedir(FD);
+	foreach my $dir (sort @files) {
+	if (($dir =~ /^\.|\.\./) || (! -d $dir) || ($dir eq $CVS)) {
+		next;
+	}
+	print "merging $dir: ";
+	my $merge = qx(
+	msgmerge ./$dir/$LC/CheckHardware.po ./$pot >./$dir/CheckHardware.$dir.po
+	);
+	qx(cp ./$dir/CheckHardware.$dir.po ./$dir/$LC/CheckHardware.po); 
+	qx(msgfmt ./$dir/$LC/CheckHardware.po -o ./$dir/$LC/CheckHardware.mo);
+	print $merge; 
+	}
+}
+
+main();
+
