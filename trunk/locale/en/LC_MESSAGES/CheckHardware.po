@@ -8,7 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2002-10-30 11:37+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-09-08 15:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +35,6 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
-# internal key used: 3DText
 #: internal key used:3 DText
 msgid ""
 "<b>3D hardware support not available</b><br><hr><br>No 3D graphics card "
