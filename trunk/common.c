@@ -45,6 +45,7 @@ bool setWarning ( const QString & text, const QDict<char> & mText ) {
 	mb.setButtonText (
 		QMessageBox::Ok, button
 	);
+	button = "";
 	QTextOStream(&button) << "  " << mText["Cancel"] << " ";
 	mb.setButtonText (
 		QMessageBox::Cancel, button
@@ -78,16 +79,16 @@ QDict<char> loadText ( bool translate ) {
 		"Warning..."
 	);
 	keyList.insert ("Ok",
-		"Ok"
+		"Continue"
 	);
 	keyList.insert ("Cancel",
-		"Cancel"
+		"Abort"
 	);
 	keyList.insert ("SoundText",
-		"<b>Direct access to sound device not possible</b><br><hr><br>"
+		"<b>Direct access to sound device not possible</b><br><hr><br>No soundcard available or sound support not configured yet. However application uses respectively requires sound support."
 	);
 	keyList.insert ("3DText",
-		"<b>3D hardware support not available</b><br><hr><br>"
+		"<b>3D hardware support not available</b><br><hr><br>No 3D graphics card available or 3D support not configured yet. However application uses respectively requires 3D hardware support."
 	);
 
 	QDictIterator<char> it (keyList);

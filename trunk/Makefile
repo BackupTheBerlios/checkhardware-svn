@@ -1,7 +1,7 @@
 LOCALEVZ   = $(DESTDIR)/usr/share/locale
 LC         = LC_MESSAGES
 
-all: CheckHardware
+all: CheckHardware Translate
 
 CheckHardware: verify.o common.o
 	g++ -Wall -O2 -o CheckHardware verify.o common.o \
@@ -12,6 +12,11 @@ common.o: common.c common.h
 
 verify.o: verify.c
 	g++ -Wall -O2 -c verify.c -I/usr/lib/qt3/include
+
+Translate: ./locale/CheckHardware.pot
+
+./locale/CheckHardware.pot:
+	${MAKE} -C ./locale all
 
 install: all
 	mkdir -p $(DESTDIR)/usr/bin
@@ -25,8 +30,6 @@ install: all
 	for i in `ls -l1 ./locale | grep -v CVS`; do \
 		if [ -d ./locale/$$i ];then \
 			install -d -m 755 ${LOCALEVZ}/$$i/${LC} ;\
-			( cd ./locale/$$i/${LC}  && \
-			msgfmt -o CheckHardware.mo CheckHardware.po ) ;\
 			install -m 644 ./locale/$$i/${LC}/CheckHardware.mo \
 			${LOCALEVZ}/$$i/${LC} ;\
 		fi \
@@ -35,6 +38,4 @@ install: all
 clean:
 	rm -f *.o
 	rm -f CheckHardware
-
-pot:
-	${MAKE} -C ./locale all
+	${MAKE} -C ./locale clean

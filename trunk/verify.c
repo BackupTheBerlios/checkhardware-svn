@@ -89,7 +89,6 @@ int main (int argc,char* argv[],char* envp[]) {
 	char* baseName = NULL;
 	QRegExp option ("^-");
 	for ( int i=1; i<qApp->argc(); i++ ) {
-	//if (! QString(qApp->argv()[i]).contains ("-")) {
 	int position = option.search (qApp->argv()[i],0);
 	if (position < 0) { 
 		if (program.isNull()) {

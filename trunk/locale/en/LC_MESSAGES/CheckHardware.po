@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2002-03-18 12:44+0100\n"
+"POT-Creation-Date: 2002-03-18 14:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,26 +15,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 # internal key used: SoundText
-msgid "<b>Direct access to sound device not possible</b><br><hr><br>"
-msgstr ""
+msgid ""
 "<b>Direct access to sound device not possible</b><br><hr><br>No soundcard "
 "available or sound support not configured yet. However application uses "
 "respectively requires sound support."
+msgstr ""
 
 # internal key used: Cancel
-msgid "Cancel"
-msgstr "Abort"
+msgid "Abort"
+msgstr ""
 
 # internal key used: Ok
-msgid "Ok"
-msgstr "Continue"
+msgid "Continue"
+msgstr ""
 
 # internal key used: 3DText
-msgid "<b>3D hardware support not available</b><br><hr><br>"
-msgstr ""
+msgid ""
 "<b>3D hardware support not available</b><br><hr><br>No 3D graphics card "
 "available or 3D support not configured yet. However application uses "
 "respectively requires 3D hardware support."
+msgstr ""
 
 # internal key used: Warning
 msgid "Warning..."
