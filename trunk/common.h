@@ -27,6 +27,7 @@ STATUS        : Development
 // Prototypes...
 //------------------------------------
 bool setWarning ( const QString & text, const QDict<char> & mText );
+void setIntro ( const QDict<char> & mText );
 QDict<char> loadText ( bool = false );
 void child ( int  );
 void usage ( void );

@@ -73,6 +73,7 @@ int main (int argc,char* argv[],char* envp[]) {
 	// init main application object
 	// ---
 	QApplication app (argc,argv);
+	bool needWarning = false;
 
 	// ...
 	// check the commandline paramters. The first parameter
@@ -138,11 +139,13 @@ int main (int argc,char* argv[],char* envp[]) {
 	// ---
 	if (checkSound) {
 	if ((fd=open (device.ascii(),O_RDONLY | O_NONBLOCK)) < 0) {
+		needWarning = true;
 		baseCheck = setWarning ( mText["SoundText"],mText );
 		if (! baseCheck) {
 			exit (1);
 		}
 	} else {
+		needWarning = false;
 		close (fd);
 	}
 	}
@@ -155,8 +158,7 @@ int main (int argc,char* argv[],char* envp[]) {
 	// ---
 	if (check3D) {
 		QString command;
-		//freopen("/dev/null","w",stdout);
-		bool needWarning = false;
+		needWarning = false;
 		int code = system (test3D.ascii());
 		switch ( WEXITSTATUS (code) ) {
 		case 1:
@@ -186,6 +188,9 @@ int main (int argc,char* argv[],char* envp[]) {
 	if (! baseCheck) {
 		exit (1);
 	}
+	if (! needWarning) {
+		setIntro ( mText );
+	}
 	app.exit();
 
 	// ...
@@ -194,32 +199,10 @@ int main (int argc,char* argv[],char* envp[]) {
 	// replace the current process with the new
 	// one without preforking the current process
 	// ---
-	// Just enable the behaviour you want to use
-	// ---
-	#if 0
-	signal ( SIGCHLD,child );
-	switch (fork()) {
-	case -1:
-		fprintf(stderr,"fork() failed: %s\n",
-			strerror(errno)
-		);
-	break;
-	case 0:
-		execvp(pArgv[0],pArgv);
-		fprintf(stderr,"execvp() failed: %s\n",
-			strerror(errno)
-		);
-		exit (1);
-	}
-	#endif
-
-	#if 1
 	setsid();
-	execvp(pArgv[0],pArgv);
-	fprintf(stderr,"execvp() failed: %s\n",
+	execvp ( pArgv[0],pArgv );
+	fprintf ( stderr,"execvp() failed: %s\n",
 		strerror(errno)
 	);
-	#endif
-
 	exit (1);
 }

@@ -15,6 +15,7 @@ STATUS        : Development
 **************/
 #include <qapplication.h>
 #include <qmessagebox.h>
+#include <qprogressdialog.h>
 #include <qfile.h>
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -29,6 +30,13 @@ STATUS        : Development
 #include <libintl.h>
 
 #include "common.h"
+
+//====================================
+// setIntro [ QT message ]
+//------------------------------------
+void setIntro ( const QDict<char> & mText ) {
+	sleep (1);
+}
 
 //====================================
 // setWarning [ QT message box ]
