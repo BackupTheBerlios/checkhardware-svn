@@ -166,8 +166,11 @@ int main (int argc,char* argv[],char* envp[]) {
 		case 1:
 			needWarning = true;
 		break;
-		default:
-			fprintf (stderr,"system() failed: %s",
+		case 0:
+			needWarning = false;
+		break;
+		case -1:
+			fprintf (stderr,"system() failed: %s\n",
 				strerror(errno)
 			);
 		break;
