@@ -16,21 +16,32 @@ msgstr ""
 
 # internal key used: SoundText
 msgid "<b>Failed to init sound device:</b><br><hr><br>"
-msgstr ""
+msgstr "<b>Failed to init sound device:</b><br><hr><br>Sound support"
+"not available or not configured correctly. This will"
+"result in a not working sound support for the application or even in a"
+"not starting application because of lacking sound support. See also"
+"\"Configuration\" manual, chapter \"Sound configuration\" for sound"
+"configuration details."
 
 # internal key used: Cancel
 msgid "Cancel"
-msgstr ""
+msgstr "Abort"
 
 # internal key used: Ok
 msgid "Ok"
-msgstr ""
+msgstr "Continue"
 
 # internal key used: 3DText
 msgid ""
 "<b>Missing Requirements:</b><br><hr><br><nobr>3D hardware acceleration not "
 "available</nobr>"
 msgstr ""
+"<b>Missing 3D Requirements:</b><br><hr><br>:"
+"3D hardware acceleration not available or not configured"
+"correctly. This slows down 3D performance drastically and can make 3D"
+"games unplayable. See also \"Reference\" manual, chapter \"OpenGL/3D\""
+"\"configuration\" for details about supported 3D Hardware and"
+"configuration issues."
 
 # internal key used: Warning
 msgid "Warning..."

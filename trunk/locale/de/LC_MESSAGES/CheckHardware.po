@@ -17,7 +17,13 @@ msgstr ""
 
 # internal key used: SoundText
 msgid "<b>Failed to init sound device:</b><br><hr><br>"
-msgstr "<b>Zugriff auf Soundkarte verweigert:</b><br><hr><br>"
+msgstr "<b>Zugriff auf Soundkarte verweigert:</b><br><hr><br>Sound"
+"Unterstützung nicht verfügbar oder nicht korrekt konfiguriert."
+"Dies führt zu nicht vorhandener Sound Unterstützung für"
+"die Applikation oder sogar dazu, dass das Spiel wegen nicht"
+"vorhanderen Sound UnterstA¼tzung gar nicht starten kann. Details zur"
+"Konfiguration von Sound finden Sie auch im Handbuch \"Konfiguration\","
+"Kapitel \"Sound Konfiguration\"."
 
 # internal key used: Cancel
 msgid "Cancel"
@@ -25,15 +31,18 @@ msgstr "Abbrechen"
 
 # internal key used: Ok
 msgid "Ok"
-msgstr "Ok"
+msgstr "Weiter"
 
 # internal key used: 3DText
 msgid ""
 "<b>Missing Requirements:</b><br><hr><br><nobr>3D hardware acceleration not "
 "available</nobr>"
 msgstr ""
-"<b>Fehlende Hardwareanforderung:</b><br><hr><br><nobr>Die 3D Hardware-"
-"Beschleunigung ist nicht verfügbar"
+"<b>Fehlende Hardwareanforderung:</b><br><hr><br>3D Hardware Beschleunigung nicht"
+"verfügbar oder nicht korrekt konfiguriert. Dies verschlechtert die 3D Performance"
+"erheblich und kann 3D Spiele unspielbar machen. Details finden Sie auch im Handbuch"
+"\"Referenz\", Kapitel \"OpenGL/3D Konfiguration\" zur unterstützten 3D"
+"Hardware und deren Konfiguration."
 
 # internal key used: Warning
 msgid "Warning..."

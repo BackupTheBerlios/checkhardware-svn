@@ -44,6 +44,13 @@ int main (int argc,char* argv[],char* envp[]) {
 	QDict<char> mText;
 
 	// ...
+	// check minimum required number of arguments
+	// ---
+	if (argc < 2) {
+		usage();
+	}
+
+	// ...
 	// set global base check result to true, may be 
 	// overwritten from the check code initialized via
 	// check3D / checkSound
@@ -58,6 +65,9 @@ int main (int argc,char* argv[],char* envp[]) {
 	for (int i=0;i<argc;i++) {
 	if (QString(argv[i]) == "--makePot") {
 		loadText (true);
+	}
+	if (QString(argv[i]) == "--help") {
+		usage();
 	}
 	}
 

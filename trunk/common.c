@@ -116,5 +116,9 @@ void child (int s) {
 // usage [ help message ]
 //------------------------------------
 void usage (void) {
+	printf("Usage: CheckHardware [OPTION] <command> [command options]\n\n");
+	printf("Available options:\n\n");
+	printf("  --sound    check sound\n");
+	printf("  --3D       check 3D\n");
 	exit(1);
 }
