@@ -45,7 +45,7 @@ msgid ""
 "available or 3D support not configured yet. However application uses "
 "respectively requires 3D hardware support."
 msgstr ""
-"<b>Podpora 3D hardwaru není dostupná/b><br><hr><br>Nemáte grafickou kartu s "
+"<b>Podpora 3D hardwaru není dostupná</b><br><hr><br>Nemáte grafickou kartu s "
 "3D podporou nebo jste 3D podporu doposud nenastavili. Aplikace však vyžaduje "
 "podporu 3D."
 
