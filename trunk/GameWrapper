@@ -32,7 +32,7 @@ fi
 
 SOUND=""
 DREID=""
-COMMAND=$1
+COMMAND=`which $1`
 
 Check4SoundLibs $COMMAND && SOUND="--sound"
 CheckFor3DLibs  $COMMAND && DREID="--3D"
