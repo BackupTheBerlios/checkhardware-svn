@@ -3,7 +3,7 @@ FILE          : CheckHardware.c
 ***************
 PROJECT       : gameChecker
               :
-AUTHOR        : Marcus Schäfer <ms@suse.de>
+AUTHOR        : Marcus Sch?r <ms@suse.de>
               :
 BELONGS TO    : Validation program for running 
               : games under Linux
@@ -40,7 +40,7 @@ STATUS        : Development
 int main (int argc,char* argv[],char* envp[]) {
 	int fd = 0;
 	QString device ("/dev/dsp");
-	QString test3D ("/usr/bin/3Ddiag-result");
+	QString test3D ("/usr/X11R6/bin/glXIsDirect");
 	QString program;
 	QDict<char> mText;
 
