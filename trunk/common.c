@@ -93,7 +93,7 @@ QDict<char> loadText ( bool translate ) {
 		"Abort"
 	);
 	keyList.insert ("SoundText",
-		"<b>Direct access to sound device not possible</b><br><hr><br>No soundcard available or sound support not configured yet. However application uses respectively requires sound support."
+		"<b>Direct access to sound device not possible</b><br><hr><br>No soundcard available or sound support not configured yet. However, the application uses or requires sound support."
 	);
 	keyList.insert ("3DText",
 		"<b>3D hardware support not available</b><br><hr><br>No 3D graphics card available or 3D support not configured yet. However application uses respectively requires 3D hardware support."
