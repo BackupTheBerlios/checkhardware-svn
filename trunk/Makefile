@@ -1,3 +1,6 @@
+LOCALEVZ   = $(DESTDIR)/usr/share/locale
+LC         = LC_MESSAGES
+
 all: CheckHardware
 
 CheckHardware: verify.o common.o
@@ -12,19 +15,26 @@ verify.o: verify.c
 
 install: all
 	mkdir -p $(DESTDIR)/usr/bin
-	mkdir -p $(DESTDIR)/usr/share/locale/de/LC_MESSAGES/
-	mkdir -p $(DESTDIR)/usr/share/locale/en/LC_MESSAGES/
 	install -m 755 CheckHardware   $(DESTDIR)/usr/bin
 	install -m 755 Check4SoundLibs $(DESTDIR)/usr/bin
 	install -m 755 CheckFor3DLibs  $(DESTDIR)/usr/bin
 	install -m 755 GameWrapper     $(DESTDIR)/usr/bin
-	msgfmt locale/de/CheckHardware.po -o $(DESTDIR)/usr/share/locale/de/LC_MESSAGES/CheckHardware.mo
-	msgfmt locale/en/CheckHardware.po -o $(DESTDIR)/usr/share/locale/en/LC_MESSAGES/CheckHardware.mo
+
+	# install NLS support...
+	# -----------------------
+	for i in `ls -l1 ./locale | grep -v CVS`; do \
+		if [ -d ./locale/$$i ];then \
+			install -d -m 755 ${LOCALEVZ}/$$i/${LC} ;\
+			( cd ./locale/$$i/${LC}  && \
+			msgfmt -o CheckHardware.mo CheckHardware.po ) ;\
+			install -m 644 ./locale/$$i/${LC}/CheckHardware.mo \
+			${LOCALEVZ}/$$i/${LC} ;\
+		fi \
+	done
 
 clean:
 	rm -f *.o
 	rm -f CheckHardware
 
 pot:
-	./CheckHardware --makePot | xgettext -L C - -c -o - | \
-		grep -v "^#:" | sed -e s"@^#.@#:@"
+	${MAKE} -C ./locale all

@@ -1,13 +1,13 @@
 # domain "CheckHardware.mo"
-#:SOME DESCRIPTIVE TITLE.
-#:Copyright (C) YEAR Free Software Foundation, Inc.
-#:FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: fuzzy
+# fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2002-03-15 16:11+0100\n"
+"POT-Creation-Date: 2002-03-16 01:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,26 +15,26 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-15\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: internal key used: SoundText
+# internal key used: SoundText
 msgid "<b>Failed to init sound device:</b><br><hr><br>"
 msgstr "<b>Zugriff auf Soundkarte verweigert:</b><br><hr><br>"
 
-#: internal key used: Cancel
+# internal key used: Cancel
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: internal key used: Ok
+# internal key used: Ok
 msgid "Ok"
 msgstr "Ok"
 
-#: internal key used: 3DText
+# internal key used: 3DText
 msgid ""
 "<b>Missing Requirements:</b><br><hr><br><nobr>3D hardware acceleration not "
 "available</nobr>"
 msgstr ""
-"<b>Fehlende Hardwareanforderung:</b><br><hr><br><nobr>"
-"Die 3D Hardware-Beschleunigung ist nicht verfügbar"
+"<b>Fehlende Hardwareanforderung:</b><br><hr><br><nobr>Die 3D Hardware-"
+"Beschleunigung ist nicht verfügbar"
 
-#: internal key used: Warning
+# internal key used: Warning
 msgid "Warning..."
 msgstr "Warnung..."

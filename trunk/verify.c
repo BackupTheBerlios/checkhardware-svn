@@ -38,7 +38,6 @@ STATUS        : Development
 //------------------------------------
 int main (int argc,char* argv[],char* envp[]) {
 	int fd = 0;
-	QApplication app (argc,argv);
 	QString device ("/dev/dsp");
 	QString test3D ("/usr/bin/3Ddiag-result");
 	QString program;
@@ -52,6 +51,20 @@ int main (int argc,char* argv[],char* envp[]) {
 	bool baseCheck  = true;
 	bool check3D    = false;
 	bool checkSound = false;
+
+	// ...
+	// check for pot template generation
+	// ---
+	for (int i=0;i<argc;i++) {
+	if (QString(argv[i]) == "--makePot") {
+		loadText (true);
+	}
+	}
+
+	// ...
+	// init main application object
+	// ---
+	QApplication app (argc,argv);
 
 	// ...
 	// check the commandline paramters. The first parameter
@@ -71,9 +84,6 @@ int main (int argc,char* argv[],char* envp[]) {
 		sprintf(baseName,"%s",program.ascii());
 		continue;
 		} 
-	}
-	if (QString(qApp->argv()[i]) == "--makePot") {
-		loadText (true);
 	}
 	if (QString(qApp->argv()[i]) == "--sound") {
 		checkSound = true;
