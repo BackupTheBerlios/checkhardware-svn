@@ -10,6 +10,17 @@ common.o: common.c common.h
 verify.o: verify.c
 	g++ -Wall -O2 -c verify.c -I/usr/lib/qt3/include
 
+install: all
+	mkdir -p $(DESTDIR)/usr/bin
+	mkdir -p $(DESTDIR)/usr/share/locale/de/LC_MESSAGES/
+	mkdir -p $(DESTDIR)/usr/share/locale/en/LC_MESSAGES/
+	install -m 755 CheckHardware   $(DESTDIR)/usr/bin
+	install -m 755 Check4SoundLibs $(DESTDIR)/usr/bin
+	install -m 755 CheckFor3DLibs  $(DESTDIR)/usr/bin
+	install -m 755 GameWrapper     $(DESTDIR)/usr/bin
+	msgfmt locale/de/CheckHardware.po -o $(DESTDIR)/usr/share/locale/de/LC_MESSAGES/CheckHardware.mo
+	msgfmt locale/en/CheckHardware.po -o $(DESTDIR)/usr/share/locale/en/LC_MESSAGES/CheckHardware.mo
+
 clean:
 	rm -f *.o
 	rm -f CheckHardware
